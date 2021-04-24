@@ -44,7 +44,7 @@ You can then execute your native executable with: `./target/hello-world-grpc-str
 If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.html.
 
 ## Known Issues
-Incompatibile with java 16
+Incompatible with java 16
 
 Recommend SDKMAN to manage JDKs, tested with the following JDK:
 ```shell script
