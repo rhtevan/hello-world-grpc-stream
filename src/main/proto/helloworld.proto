@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package helloworld;
+
+import "google/protobuf/empty.proto";
+
+option java_multiple_files = true;
+option java_package = "io.quarkus.example";
+option java_outer_classname = "HelloWorldProto";
+
+// An empty message for testing import
+message AnEmptyMsg {
+    google.protobuf.Empty nothing = 1;
+}
+
+// The request message containing the user's name
+message HelloRequest {
+    string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+    string message = 1;
+}
+
+// The greeting service definition
+service Greeter {
+    rpc SayHello (HelloRequest) returns (HelloReply) {};
+    rpc SayHelloAgainAndAgain (HelloRequest) returns (stream HelloReply);
+}
